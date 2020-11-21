@@ -1,3 +1,5 @@
+const theme = require("./src/theme")
+
 module.exports = {
   siteMetadata: {
     title: `Gatsby Default Starter`,
@@ -14,6 +16,7 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
+    "gatsby-plugin-dark-mode",
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
@@ -25,6 +28,22 @@ module.exports = {
         theme_color: `#663399`,
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+      },
+    },
+    `gatsby-plugin-styled-components`,
+    {
+      resolve: "gatsby-plugin-less",
+      options: {
+        lessOptions: {
+          javascriptEnabled: true,
+          modifyVars: theme,
+        },
+      },
+    },
+    {
+      resolve: "gatsby-plugin-antd",
+      options: {
+        style: true,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

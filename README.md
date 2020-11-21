@@ -8,6 +8,38 @@
   Gatsby's default starter
 </h1>
 
+npm used:
+
+```shell
+  npm install gatsby-plugin-styled-components styled-components babel-plugin-styled-components gatsby-plugin-less gatsby-plugin-dark-mode react-toggle-dark-mode
+
+  npm install antd gatsby-plugin-antd --save
+```
+
+config:
+
+```shell
+  `gatsby-plugin-styled-components`,
+  {
+      resolve: "gatsby-plugin-less",
+      options: {
+        lessOptions: {
+          javascriptEnabled: true,
+          modifyVars: {
+         "text-color": `#fff`,
+      },
+        },
+
+      },
+    },
+  {
+      resolve: "gatsby-plugin-antd",
+      options: {
+        style: true,
+      },
+    },
+```
+
 Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
 
 _Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.com/docs/gatsby-starters/)._

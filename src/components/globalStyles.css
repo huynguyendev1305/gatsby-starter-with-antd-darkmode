@@ -1,0 +1,73 @@
+/* MonoKai theme */
+body {
+  --bgColor: #272822;
+  --textColor: #f8f8f2;
+  --headerColor: white;
+  --linkColor: #f92672;
+  --linkHoverColor: #ff78a0;
+
+  background-color: var(--bgColor);
+  color: var(--textColor);
+  -webkit-font-smoothing: antialiased;
+  transition: all 0.2s linear;
+}
+
+body.light {
+  --bgColor: #ffffff;
+  --textColor: #424242;
+  --headerColor: black;
+  --linkColor: #f5222d;
+  --linkHoverColor: #cf1322;
+}
+
+[class^="ant-layout"],
+[class^="ant-layout"] {
+  box-sizing: border-box;
+  transition: background-color 0.2s linear;
+}
+
+/* Container responsive */
+.container {
+  padding-right: 1rem;
+  padding-left: 1rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+.container-fluid {
+  width: 100%;
+  padding: 0 1rem;
+  overflow-x: hidden;
+}
+
+@media only screen and (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  .container {
+    max-width: 1366px;
+  }
+}
+
+/* Override Ant-design */
+.ant-btn:hover,
+.ant-btn:focus {
+  color: var(--linkColor) !important;
+  border-color: var(--linkColor) !important;
+}
